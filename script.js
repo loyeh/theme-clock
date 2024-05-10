@@ -67,11 +67,9 @@ function update() {
   } else {
     ampm = "AM";
   }
-  hourHand.style.transform = `rotate(${
-    (hour + 3) * 15 + (minute - 15) * 0.6
-  }deg)`;
-  minuteHand.style.transform = `rotate(${(minute - 15) * 6}deg)`;
-  secondHand.style.transform = `rotate(${(second - 15) * 6}deg)`;
+  hourHand.style.transform = `rotate(${hour * 30 - 90 + minute * 0.5}deg)`;
+  minuteHand.style.transform = `rotate(${minute * 6 - 90}deg)`;
+  secondHand.style.transform = `rotate(${second * 6 - 90}deg)`;
 
   if (second < 10) {
     second = "0" + second;
@@ -86,7 +84,7 @@ function update() {
   dateFiled.textContent = `${day}, ${month}`;
   digital.textContent = `${hour}:${minute}  ${ampm}`;
   daysFiled.textContent = `${d.getDate()}`;
-  console.log(second, minute);
+  console.log(hour, minute, second);
 }
 update();
 

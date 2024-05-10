@@ -20,7 +20,6 @@ body {
 }
 
 .container {
-  width: 50%;
   height: 50%;
   position: relative;
   margin-block: 5vmin;
@@ -29,10 +28,14 @@ body {
 .mode {
   background-color: #000;
   color: #fff;
-  padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.5s;
+  width: 25vmin;
+  text-align: center;
+  height: 10vmin;
+  line-height: 10vmin;
+  font-size: 3vmin;
 }
 
 .hour {
@@ -104,6 +107,7 @@ body {
   line-height: 6vmin;
   background-color: #000;
   font-weight: 600;
+  font-size: 3vmin;
   color: white;
   text-align: center;
   border-radius: 100px;
